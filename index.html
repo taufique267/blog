@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #34495e;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        header nav a {
+            color: #f7f9fc;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 5px 10px;
+        }
+
+        header nav a:hover {
+            background-color: #2c3e50;
+            border-radius: 5px;
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+        }
+
+        section h2 {
+            color: #34495e;
+            text-align: center;
+        }
+
+        section p {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #2c3e50;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        section img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #34495e;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 40px;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer .footer-links {
+            margin-bottom: 10px;
+        }
+
+        footer .footer-links a {
+            color: #dff9fb;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        #contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #contactForm {
+            display: none;
+            max-width: 500px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #bdc3c7;
+            box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 12px 25px;
+            background-color: #34495e;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2c3e50;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                margin: 20px 10px;
+                padding: 15px;
+            }
+
+            header nav a {
+                font-size: 16px;
+            }
+
+            input,
+            textarea {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Blog</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#home">Home</a>
+            <a href="#analytics">Analytics</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Welcome to my blog! Here, I share insights on Big Data and its profound effects on business strategies.
+            Join me on this journey to explore data-driven innovations, the latest analytics techniques, and how Big Data
+            is shaping industries.
+        </p>
+    </section>
+
+    <section id="home">
+        <h2>Big Data in Business Analysis</h2>
+        <img src="https://bigdataanalyticsnews.com/wp-content/uploads/2019/06/big-data-aprendum.jpg"
+            alt="Big Data in Business Analysis">
+        <p>
+            Big Data is transforming the business world, enabling organizations to gain deeper insights into operations and
+            customer behavior. Through advanced analytics and real-time data processing, companies can optimize their
+            strategies, forecast future trends, and create personalized experiences for their customers.
+        </p>
+    </section>
+
+    <section id="analytics">
+        <h2>Evolution of Big Data Analytics</h2>
+        <img src="https://static.javatpoint.com/blog/images/big-data-technologies.png"
+            alt="Evolution of Big Data Analytics">
+        <p>
+            Big Data analytics has come a long way. From traditional batch processing to real-time streaming, modern
+            technologies like Apache Kafka, Flink, and Spark have revolutionized how businesses handle data. These
+            innovations enable faster insights, scalability, and enhanced decision-making capabilities for organizations
+            across the globe.
+        </p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <button onclick="showContactForm()">Get in Touch</button>
+
+        <form id="contactForm">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </div>
+        <p>Abdul Taufique | taufique0618@gmail.com</p>
+        <p>© 2024 Rohit. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function showContactForm() {
+            document.getElementById('contactForm').style.display = 'block';
+        }
+    </script>
+
+</body>
+
+</html>
